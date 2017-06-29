@@ -2,6 +2,10 @@
 <manifest package="com.example.ominext.memoryleaksample"
           xmlns:android="http://schemas.android.com/apk/res/android">
 
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
   <application
       android:allowBackup="true"
       android:icon="@mipmap/ic_launcher"
@@ -10,7 +14,7 @@
       android:supportsRtl="true"
       android:name=".LeakApplication"
       android:theme="@style/AppTheme">
-    <activity android:name=".MainActivity">
+    <activity android:name=".activity.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
 
@@ -18,9 +22,11 @@
       </intent-filter>
     </activity>
 
-    <activity android:name=".ListenerActivity"/>
+    <activity android:name=".activity.ListenerActivity"/>
 
-    <activity android:name=".AsyncTaskActivity"/>
+    <activity android:name=".activity.AsyncTaskActivity"/>
+
+    <activity android:name=".activity.HandlerActivity"/>
   </application>
 
 </manifest>

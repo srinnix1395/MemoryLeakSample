@@ -1,8 +1,9 @@
-package com.example.ominext.memoryleaksample
+package com.example.ominext.memoryleaksample.activity
 
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import com.example.ominext.memoryleaksample.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 /**
@@ -19,6 +20,10 @@ class MainActivity : AppCompatActivity() {
 
         btnAsynctask.setOnClickListener {
             startActivity(AsyncTaskActivity::class.java)
+        }
+
+        btnHandler.setOnClickListener {
+            startActivity(HandlerActivity::class.java)
         }
     }
 

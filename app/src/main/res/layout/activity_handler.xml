@@ -2,26 +2,26 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:gravity="center_horizontal"
+              android:gravity="center"
               android:orientation="vertical">
 
   <TextView
       android:layout_width="match_parent"
       android:layout_height="44dp"
       android:gravity="center"
-      android:text="Broadcast receiver"/>
+      android:text="handler"/>
 
   <Button
-      android:id="@+id/btnRegister"
+      android:id="@+id/btnCreateHandler"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="register receiver"/>
+      android:text="create handler"/>
 
   <Button
-      android:id="@+id/btnUnregister"
+      android:id="@+id/btnRemoveCallback"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="Unregister receiver"/>
+      android:text="remove callback"/>
 
   <View
       android:layout_width="match_parent"
@@ -30,21 +30,23 @@
       android:layout_marginTop="10dp"
       android:background="#80000000"/>
 
+
   <TextView
       android:layout_width="match_parent"
       android:layout_height="44dp"
       android:gravity="center"
-      android:text="Location Manager"/>
+      android:text="Thread"/>
 
   <Button
-      android:id="@+id/btnStartListen"
+      android:id="@+id/btnStartThread"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="Start listen"/>
+      android:text="Start thread"/>
 
   <Button
-      android:id="@+id/btnStopListen"
+      android:id="@+id/btnStopThread"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="Stop listen"/>
+      android:text="Stop thread"/>
+
 </LinearLayout>

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context="com.example.ominext.memoryleaksample.MainActivity">
+    tools:context="com.example.ominext.memoryleaksample.activity.MainActivity">
 
   <Button
       android:id="@+id/btnListener"
@@ -19,4 +19,11 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:text="Asynctask Activity"/>
+
+  <Button
+      android:id="@+id/btnHandler"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Handler Activity"/>
+
 </LinearLayout>
