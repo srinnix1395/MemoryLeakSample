@@ -40,8 +40,8 @@ class AsyncTaskActivity : android.support.v7.app.AppCompatActivity() {
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({ t: String? ->
-                    Log.i("success", t ?: "null")
-                    tv.get()?.text = "xong"
+//                    tv.get()?.text = "xong"
+                    tvResult.text = "xong"
                 }, { t: Throwable? ->
                     Log.e("error", t?.message ?: "null")
                 }))
@@ -55,7 +55,7 @@ class AsyncTaskActivity : android.support.v7.app.AppCompatActivity() {
         }
     }
 
-    class LeakAsynctask(var tv: android.widget.TextView) : android.os.AsyncTask<Void, Void, Unit>() {
+    class LeakAsynctask(var tv: TextView) : android.os.AsyncTask<Void, Void, Unit>() {
 //        var weakTextView: WeakReference<TextView>
 //
 //        init {

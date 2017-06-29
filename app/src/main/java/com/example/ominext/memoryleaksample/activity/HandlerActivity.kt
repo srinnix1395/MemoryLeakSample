@@ -4,7 +4,6 @@ import android.widget.TextView
 import android.widget.Toast
 import com.example.ominext.memoryleaksample.R
 import kotlinx.android.synthetic.main.activity_handler.*
-import java.lang.ref.WeakReference
 
 /**
  * Created by Ominext on 6/29/2017.
@@ -31,10 +30,6 @@ class HandlerActivity : android.support.v7.app.AppCompatActivity() {
         btnStartThread.setOnClickListener {
             startThread()
         }
-
-        btnStopThread.setOnClickListener {
-            stopThread()
-        }
     }
 
     lateinit var thread: Thread
@@ -42,10 +37,6 @@ class HandlerActivity : android.support.v7.app.AppCompatActivity() {
     private fun startThread() {
         thread = MyThread(tvResult)
         thread.start()
-    }
-
-    private fun stopThread() {
-        thread.interrupt()
     }
 
     private fun createHandler() {
@@ -56,15 +47,16 @@ class HandlerActivity : android.support.v7.app.AppCompatActivity() {
         handler.removeCallbacks(runnable)
     }
 
-    class MyThread(tv: TextView) : Thread() {
-        val weak = WeakReference<TextView>(tv)
+    class MyThread(var tv: TextView) : Thread() {
+//        val weak = WeakReference<TextView>(tv)
 
         override fun run() {
             super.run()
             while (true) {
 
             }
-            weak.get()?.text = "xong"
+            tv.text = "xong"
+//            weak.get()?.text = "xong"
         }
     }
 }
